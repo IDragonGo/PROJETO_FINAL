@@ -1,0 +1,107 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x58df45662230 .scope module, "vaga_tb" "vaga_tb" 2 1;
+ .timescale 0 0;
+v0x58df45679700_0 .var "E", 3 0;
+v0x58df456797c0_0 .net "S", 1 0, L_0x58df45679b40;  1 drivers
+S_0x58df456623c0 .scope module, "vagae" "vaga" 2 13, 3 1 0, S_0x58df45662230;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "E";
+    .port_info 1 /OUTPUT 2 "S";
+L_0x58df45679a00 .functor AND 1, L_0x58df45679890, L_0x58df45679960, C4<1>, C4<1>;
+L_0x58df45679d50 .functor NOT 1, L_0x58df45679c80, C4<0>, C4<0>, C4<0>;
+L_0x58df45679e60 .functor AND 1, L_0x58df45679d50, L_0x58df45679dc0, C4<1>, C4<1>;
+L_0x58df4567a0f0 .functor AND 1, L_0x58df45679f70, L_0x58df4567a050, C4<1>, C4<1>;
+L_0x58df4567a230 .functor OR 1, L_0x58df45679e60, L_0x58df4567a0f0, C4<0>, C4<0>;
+v0x58df45652fb0_0 .net "E", 3 0, v0x58df45679700_0;  1 drivers
+v0x58df45678bf0_0 .net "S", 1 0, L_0x58df45679b40;  alias, 1 drivers
+v0x58df45678cd0_0 .net *"_ivl_12", 0 0, L_0x58df45679c80;  1 drivers
+v0x58df45678d90_0 .net *"_ivl_13", 0 0, L_0x58df45679d50;  1 drivers
+v0x58df45678e70_0 .net *"_ivl_16", 0 0, L_0x58df45679dc0;  1 drivers
+v0x58df45678fa0_0 .net *"_ivl_17", 0 0, L_0x58df45679e60;  1 drivers
+v0x58df45679080_0 .net *"_ivl_20", 0 0, L_0x58df45679f70;  1 drivers
+v0x58df45679160_0 .net *"_ivl_22", 0 0, L_0x58df4567a050;  1 drivers
+v0x58df45679240_0 .net *"_ivl_23", 0 0, L_0x58df4567a0f0;  1 drivers
+v0x58df45679320_0 .net *"_ivl_25", 0 0, L_0x58df4567a230;  1 drivers
+v0x58df45679400_0 .net *"_ivl_3", 0 0, L_0x58df45679890;  1 drivers
+v0x58df456794e0_0 .net *"_ivl_5", 0 0, L_0x58df45679960;  1 drivers
+v0x58df456795c0_0 .net *"_ivl_6", 0 0, L_0x58df45679a00;  1 drivers
+L_0x58df45679890 .part v0x58df45679700_0, 1, 1;
+L_0x58df45679960 .part v0x58df45679700_0, 0, 1;
+L_0x58df45679b40 .concat8 [ 1 1 0 0], L_0x58df4567a230, L_0x58df45679a00;
+L_0x58df45679c80 .part v0x58df45679700_0, 1, 1;
+L_0x58df45679dc0 .part v0x58df45679700_0, 0, 1;
+L_0x58df45679f70 .part v0x58df45679700_0, 2, 1;
+L_0x58df4567a050 .part v0x58df45679700_0, 1, 1;
+    .scope S_0x58df45662230;
+T_0 ;
+    %vpi_call 2 8 "$dumpfile", "sim/vaga_tb.vcd" {0 0 0};
+    %vpi_call 2 9 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x58df45662230 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x58df45662230;
+T_1 ;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0x58df45679700_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v0x58df45679700_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 2, 0, 4;
+    %store/vec4 v0x58df45679700_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0x58df45679700_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 4, 0, 4;
+    %store/vec4 v0x58df45679700_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v0x58df45679700_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 6, 0, 4;
+    %store/vec4 v0x58df45679700_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v0x58df45679700_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 8, 0, 4;
+    %store/vec4 v0x58df45679700_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 9, 0, 4;
+    %store/vec4 v0x58df45679700_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v0x58df45679700_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 11, 0, 4;
+    %store/vec4 v0x58df45679700_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 12, 0, 4;
+    %store/vec4 v0x58df45679700_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 13, 0, 4;
+    %store/vec4 v0x58df45679700_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 14, 0, 4;
+    %store/vec4 v0x58df45679700_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0x58df45679700_0, 0, 4;
+    %delay 10, 0;
+    %vpi_call 2 34 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "src/vaga_tb.v";
+    "src/vaga.v";

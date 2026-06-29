@@ -1,0 +1,19 @@
+# Projeto de Simulação Verilog
+
+Este projeto está organizado para manter os arquivos fonte, resultados de simulação e binários de compilação separados e organizados.
+
+## Estrutura de Pastas
+
+Abaixo está a representação visual da hierarquia do projeto considerando um exemplo de um projeto de um inversor lógico:
+
+
+projeto/
+├── Makefile            # Script de automação da compilação e simulação
+├── README.md           # Documentação do projeto
+├── src/                # Código-fonte (Input)
+│   ├── inversor.v      # Módulo principal
+│   └── inversor_tb.v   # Testbench
+├── sim/                # Resultados de Simulação (Output)
+│   └── inversor_tb.vcd # Formas de onda para o GTKWave
+└── .outputs/           # Binários Temporários (Hidden)
+    └── simulacao.vvp   # Arquivo compilado pelo Icarus Verilog

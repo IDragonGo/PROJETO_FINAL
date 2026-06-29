@@ -1,0 +1,9 @@
+src/topo.v
+src/motorista.v
+src/codificador.v
+src/somador_3b.v
+src/detector.v
+src/seletor.v
+src/vaga.v
+src/mux22a.v
+src/bcd_para_7seg.v
