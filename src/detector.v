@@ -1,5 +1,5 @@
 module detector (
-    input E, D, P,
+    input [3:0]E,
     output S
 );
 
